@@ -1,0 +1,31 @@
+<%- include("header.ejs") %>
+    <form method="post">
+        <fieldset>
+            <legend><h1>TOKEN API</h1></legend>
+            <section>
+                <div id="content">
+                    <%= locals.content %>
+                </div>
+                <div>
+                    <label><b>id: </b></label>
+                    <input type="text" id="id" name="id"/>
+                </div>
+                <div>
+                    <label><b>score: </b></label>
+                    <input type="text" id="score" name="score"/>
+                </div>
+                <div>
+                    <label><b>secret: </b></label>
+                    <input type="text" id="secret" name="secret"/>
+                </div>
+                <!--submit buttons-->
+                <input type="submit" formaction="/get-secret" value="GET" class="button" id="get"/>
+                <input type="submit" formaction="/post-secret" value="POST" class="button" id="post"/>
+                <input type="submit" formaction="/patch-secret" value="PARTIAL UPDATE" class="button" id="patch"/>
+                <input type="submit" formaction="/put-secret" value="UPDATE" class="button" id="put"/>
+                <input type="submit" formaction="/delete-secret" value="DELETE" class="button" id="delete"/>
+            </section>
+        </fieldset>
+    </form>
+</body>
+</html>
